@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GoogleAuth from './GoogleAuth';
 
 function Header(props) {
 	return (
@@ -26,14 +27,12 @@ function Header(props) {
 					<div className='collapse navbar-collapse' id='navbarSupportedContent'>
 						<ul className='navbar-nav ms-auto me-0 mb-2 mb-sm-0'>
 							<li className='nav-item'>
-								<Link className='nav-link ' aria-current='page' to='/'>
+								<Link className='nav-link' aria-current='page' to='/'>
 									Streams
 								</Link>
 							</li>
-							<li className='nav-item'>
-								<Link className='nav-link' to='/streams/new'>
-									Login
-								</Link>
+							<li className='nav-item' style={{ cursor: 'pointer' }}>
+								<GoogleAuth className='nav-link' />
 							</li>
 						</ul>
 					</div>
